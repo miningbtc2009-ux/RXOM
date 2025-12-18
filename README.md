@@ -1,2 +1,0 @@
-# RXOM
-Informasi

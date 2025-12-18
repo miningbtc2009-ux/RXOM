@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REXOM</title>
+
+  <!-- favicon dari URL -->
+  <link rel="icon" href="https://example.com/rexom.png">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .box {
+      text-align: center;
+    }
+
+    img {
+      width: 320px;
+      max-width: 90%;
+      cursor: pointer;
+      box-shadow: 0 0 35px rgba(255,255,255,0.6);
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #111;
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+
+    input {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <!-- GAMBAR DARI URL -->
+    <img id="image"
+         src="https://danxyofficial.zapto.org/_next/image?url=%2Flogo%2Fhacktivis47.png&w=256&q=75"
+         alt="REXOM"
+         onclick="playSound()">
+
+    <!-- INFO -->
+    <div class="info">
+      Nama : REXOM<br>
+      Identitas : SISWA<br>
+      Status : ON<br>
+      Sistem : PUBLIC
+    </div>
+
+  </div>
+
+  <!-- SOUND DARI URL -->
+ <audio autoplay loop muted id="bgm">
+  <source src="https://operational-indigo-jlv03qwxai-2qmizj15hd.edgeone.dev/tiktokio.com1766035671_WY0UGeYDzFSFT5xOssFR..mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  window.addEventListener("click", () => {
+    const a = document.getElementById("bgm");
+    a.muted = false;
+    a.play();
+  }, { once: true });
+</script>
+
+  <script>
+    function playSound() {
+      const audio = document.getElementById("sound");
+      audio.currentTime = 0;
+      audio.play();
+    }
+
+    function openGallery() {
+      document.getElementById("fileInput").click();
+    }
+
+    function changeImage(event) {
+      const img = document.getElementById("image");
+      img.src = URL.createObjectURL(event.target.files[0]);
+    }
+  </script>
+
+</body>
+</html>
